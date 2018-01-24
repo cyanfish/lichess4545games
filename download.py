@@ -51,9 +51,9 @@ def game_to_pgn(p, g):
     pgn = ''
     for h in headers:
         if h[1] is None:
-            pgn += '[%s \'?\']\n' % (h[0])
+            pgn += '[%s "?"]\n' % (h[0])
         else:
-            pgn += '[%s \'%s\']\n' % h
+            pgn += '[%s "%s"]\n' % h
     pgn += '\n'
     ply = 0
     for m in moves.split(' '):
